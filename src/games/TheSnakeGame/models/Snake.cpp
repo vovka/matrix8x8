@@ -15,26 +15,51 @@ void Snake::pullTheTale()
 
 void Snake::moveUp()
 {
-  pullTheTale();
-  body[0][Y]--;
+  if (isMoving != DOWN)
+  {
+    pullTheTale();
+    body[0][Y]--;
+    isMoving = UP;
+  }
+  else
+    moveDown();
 }
 
 void Snake::moveRight()
 {
-  pullTheTale();
-  body[0][X]++;
+  if (isMoving != LEFT)
+  {
+    pullTheTale();
+    body[0][X]++;
+    isMoving = RIGHT;
+  }
+  else
+    moveLeft();
 }
 
 void Snake::moveDown()
 {
-  pullTheTale();
-  body[0][Y]++;
+  if (isMoving != UP)
+  {
+    pullTheTale();
+    body[0][Y]++;
+    isMoving = DOWN;
+  }
+  else
+    moveUp();
+
 }
 
 void Snake::moveLeft()
 {
-  pullTheTale();
-  body[0][X]--;
+  if (isMoving != RIGHT)
+  {
+    pullTheTale();
+    body[0][X]--;
+    isMoving = LEFT;
+  }
+  else
+    moveRight();
 }
 
 void Snake::increment()

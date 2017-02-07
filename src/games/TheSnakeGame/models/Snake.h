@@ -23,6 +23,11 @@ public:
                               };
 private:
   void pullTheTale();
+  const char UP = 1,
+             RIGHT = 2,
+             DOWN = 3,
+             LEFT = 4;
+  char isMoving = 0;
 };
 
 #endif
