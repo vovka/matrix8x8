@@ -8,7 +8,7 @@ private:
   int matrixIn[2][8];
   char COL = 0,
        ROW = 1,
-       COLUMN_FREEZE_PERIOD = 0,
+       COLUMN_FREEZE_PERIOD = 2,
        previousColumn = 0;
 
   void switchOffColumn(char);
