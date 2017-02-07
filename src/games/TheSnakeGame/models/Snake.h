@@ -1,12 +1,12 @@
-#ifndef Worm_h
-#define Worm_h
+#ifndef Snake_h
+#define Snake_h
 
-class Worm
+class Snake
 {
 public:
   static const char X = 0, Y = 1;
-  // Worm();
-  // ~Worm();
+  // Snake();
+  // ~Snake();
   void moveUp();
   void moveRight();
   void moveDown();

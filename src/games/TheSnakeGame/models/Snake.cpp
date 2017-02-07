@@ -1,10 +1,10 @@
-#include "Worm.h"
+#include "Snake.h"
 
-// Worm::Worm()
+// Snake::Snake()
 // {
 // }
 
-void Worm::pullTheTale()
+void Snake::pullTheTale()
 {
   for (char i = length - 1; i > 0; i--)
   {
@@ -13,31 +13,31 @@ void Worm::pullTheTale()
   }
 }
 
-void Worm::moveUp()
+void Snake::moveUp()
 {
   pullTheTale();
   body[0][Y]--;
 }
 
-void Worm::moveRight()
+void Snake::moveRight()
 {
   pullTheTale();
   body[0][X]++;
 }
 
-void Worm::moveDown()
+void Snake::moveDown()
 {
   pullTheTale();
   body[0][Y]++;
 }
 
-void Worm::moveLeft()
+void Snake::moveLeft()
 {
   pullTheTale();
   body[0][X]--;
 }
 
-void Worm::increment()
+void Snake::increment()
 {
   length++;
 }

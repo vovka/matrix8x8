@@ -1,11 +1,11 @@
-#ifndef TheWormGame_h
-#define TheWormGame_h
+#ifndef TheSnakeGame_h
+#define TheSnakeGame_h
 
 #include <Arduino.h>
-#include "models/Worm.h"
+#include "models/Snake.h"
 #include "models/ObstaclesCollection.h"
 
-class TheWormGame
+class TheSnakeGame
 {
   static const char    UP = 1,
                     RIGHT = 2,
@@ -14,10 +14,10 @@ class TheWormGame
                      X = 0,
                      Y = 1;
 public:
-  // TheWormGame();
-  // ~TheWormGame();
+  // TheSnakeGame();
+  // ~TheSnakeGame();
   void play(unsigned char);
-  Worm worm;
+  Snake snake;
   ObstaclesCollection obstaclesCollection;
 private:
   bool isTimeToChange();
@@ -26,7 +26,9 @@ private:
   bool checkCollisions();
   void checkObstacleCollision();
   bool checkSelfCollision();
+  bool checkEdgesCollision();
   int prevTime = 0, period = 200;
+  bool stop = false;
 };
 
 #endif
