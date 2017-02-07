@@ -4,7 +4,7 @@
 class BinaryMatrixOperations
 {
 public:
-  void rotateCounterClockwise(unsigned char[], unsigned char[]); 
+  void rotateCounterClockwise(unsigned char[]); 
 };
 
 #endif
